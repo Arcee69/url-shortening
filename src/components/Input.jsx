@@ -6,7 +6,7 @@ import "../App.css";
 
 const InputUrl = () => {
 
-    const [urlData, setUrlData] = useState([]);
+    const [urlData, setUrlData] = useState();
     const [loading, setLoading] = useState(false);
 
     const dataId = useId();
@@ -25,23 +25,12 @@ const InputUrl = () => {
     const apiShort = "https://api.shrtco.de/v2/shorten?url=";
 
     const submitLink = async (values) => {
-        const response = await axios.post([`https://api.shrtco.de/v2/shorten?url=${values.url}`]);
+        const response = await axios.post([`https://api.shrtco.de/v2/shorten?url=${values?.url}`]);
         if (response.status === 201) {
-            alert("Url sent");
+            setUrlData(response.data.result);
+            // alert("Url sent");
         }
     };
-
-    const getLink = async (values) => {
-        const response = await axios.get(`https://api.shrtco.de/v2/shorten?url=${values.url}`);
-        const res = response.data.result;
-        console.log(res);
-        // setUrlData(res);
-        // console.log(response, "Kokoma");
-    }
-
-    useEffect(() => {
-        getLink()
-    }, [urlData])
 
     function changeBackground(e) {
         e.target.style.background = '#2acfcf';
@@ -64,7 +53,7 @@ const InputUrl = () => {
             onSubmit={values => {
                 // same shape as initial values
                submitLink(values);
-               getLink(values);
+            
             }}
             >
                 {({ 
@@ -73,14 +62,14 @@ const InputUrl = () => {
                     touched,
                     values 
                 }) => (
-                    <Form onSubmit={handleSubmit} className="w-full relative top-12 z-10">
-                        <div className='w-6/12 flex flex-row mx-auto items-center p-7 bg-PRIMARY_DARK_VIOLET'>
-                            <div className='w-5/6 flex flex-col'>
+                    <Form onSubmit={handleSubmit} className="w-full relative sm:top-12 xs:top-14 z-10">
+                        <div className='sm:w-6/12 xs:w-11/12 flex xs:flex-col xs:justify-between sm:flex-row mx-auto items-center sm:justify-start sm:p-7 xs:p-3 bg-PRIMARY_DARK_VIOLET'>
+                            <div className='sm:w-5/6 xs:w-6/6 xs:mt-2 sm:mt-0 flex flex-col'>
                                 <div>
                                     <Field 
                                         name="url" 
                                         values={values.url}
-                                        className="w-5/6 p-2 outline-none rounded-md"
+                                        className="sm:w-5/6 xs:  p-2 outline-none rounded-md"
                                         placeholder=" Shorten a link here..." 
                                     />
                                 </div>
@@ -88,8 +77,8 @@ const InputUrl = () => {
                                     <ErrorMessage name="url"  />
                                 </div> 
                             </div>
-                            <div className='w-1/6 text-center rounded-md'>
-                                <button type="submit" onMouseOver={changeBackground} onMouseOut={previousBackground} className='text-white p-2 border rounded-md'>
+                            <div className='sm:w-1/6 xs:w-4/6 xs:mt-3 sm:mt-0 text-center rounded-md'>
+                                <button type="submit" onMouseOver={changeBackground} onMouseOut={previousBackground} className='text-white xs:text-sm w-full p-2 sm:text-sm  border rounded-md'>
                                     Shorten it!
                                 </button>
                             </div>
@@ -100,13 +89,13 @@ const InputUrl = () => {
                 )}
             </Formik>
         </div>
-        {urlData && urlData.map((item) => {
-            <div key={dataId}>
-                <div>{item.original_link}</div>
-                <div>{item.full_short_link}</div>
+        {urlData &&
+            <div>
+                <div>{urlData.original_link}</div>
+                <div>{urlData.full_short_link}</div>
                 <button>Copy</button>
             </div> 
-        })}  
+        }  
     </>    
     );
 };

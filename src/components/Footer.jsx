@@ -53,30 +53,30 @@ const Footer = () => {
 
   return (
     <div className='w-full  bg-NEUTRAL-_400 text-white xs:p-6 sm:p-16' id='footer'>
-        <div className='xs:mx-0 sm:mx-10 sm:w-12/12 flex sm:flex-row xs:flex-col sm:justify-between'>
+        <div className='xs:mx-0 sm:mx-10 sm:w-12/12 xs:mt-4 sm:mt-0 flex sm:flex-row xs:flex-col xs:items-center sm:items-start sm:justify-between'>
             <div className=' xs:w-6/6 sm:w-3/12'>
                 <div className='text-3xl font-bold'>Shortly</div>
             </div>
-            <div className='xs:w-6/6 xs:mt-5 sm:w-2/12 sm:mt-0 flex flex-col content-between'>
+            <div className='xs:w-6/6 xs:mt-5 sm:w-2/12 sm:mt-0 flex flex-col xs:text-center sm:text-left content-between'>
                 <div className='text-2xl font-medium'>Features</div>
-                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Link Shortening</div>
+                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='sm:mt-2 xs:mt-4 text-sm cursor-pointer font-light'>Link Shortening</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm font-light cursor-pointer'>Branded Links</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm font-light cursor-pointer'>Analytics</div>
             </div>
-            <div className='xs:w-6/6 xs:mt-5 sm:w-2/12 sm:mt-0 flex flex-col content-between'>
+            <div className='xs:w-6/6 xs:mt-5 sm:w-2/12 sm:mt-0 flex flex-col xs:text-center sm:text-left content-between'>
                 <div className='text-2xl font-medium'>Resources</div>
-                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Blog</div>
+                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='sm:mt-2 xs:mt-4 text-sm cursor-pointer font-light'>Blog</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Developers</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Support</div>
             </div>
-            <div className='xs:w-6/6 xs:mt-5 sm:w-2/12 sm:mt-0 flex flex-col content-between'>
+            <div className='xs:w-6/6 xs:mt-5 sm:w-2/12 sm:mt-0 flex flex-col xs:text-center sm:text-left content-between'>
                 <div className='text-2xl font-medium'>Company</div>
-                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>About</div>
+                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='sm:mt-2 xs:mt-4 text-sm cursor-pointer font-light'>About</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Our Team</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Careers</div>
                 <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} className='mt-2 text-sm cursor-pointer font-light'>Contact</div>
             </div>
-            <div className='xs:w-6/6 xs:mt-5 sm:mt-1 sm:w-2/12 flex flex-row justify-between'>
+            <div className='xs:w-3/6 xs:mt-5 xs:mb-4 sm:mb-0 sm:mt-1 sm:w-2/12 flex flex-row items-center justify-between'>
                 {/* <div className="sm:w-6/12 flex flex-row justify-between"> */}
                     <Facebook fill={facebook ? "#2acfcf" : "#fff"} onMouseOver={handleFacebookHover} onMouseLeave={handleFacebookLeave} />
                     <Instagram fill={instagram ? "#2acfcf" : "#fff"} onMouseOver={handleInstagramHover} onMouseLeave={handleInstagramLeave} />
