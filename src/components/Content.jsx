@@ -7,6 +7,7 @@ const Content = () => {
     function changeBackground(e) {
         e.target.style.background = '#2acfcf';
         e.target.style.color = '#fff';
+        e.target.style.border = "1px solid #fff";
     };
 
     function previousBackground(e) {

@@ -8,7 +8,7 @@ const Statistics = () => {
   return (
         <div className='w-full bg-NEUTRAL-_100'>
             <div className='w-6/6 flex flex-col text-center items-center'>
-                <div className='w-2/6 mx-auto mt-20'>
+                <div className='w-2/6 mx-auto mt-24'>
                     <div className='font-bold text-2xl text-NEUTRAL-_400'>Advanced Statistics</div>
                     <div className='text-NEUTRAL-_300 text-base mt-2'>
                         Track how your links are performing across the web with our advanced statistics dashboard
@@ -18,8 +18,8 @@ const Statistics = () => {
             <div className='w-12/12 flex flex-row mt-10'>
                 <div className="flex flex-row justify-center items-center mb-20">
                     <div className='bg-white w-3/12'>
-                        <div className='bg-PRIMARY_DARK_VIOLET w-14' style={{ borderRadius: "50%"}}>
-                            <img src={Brand} alt="brand" className='mx-auto' />
+                        <div className='bg-PRIMARY_DARK_VIOLET ml-4 relative -top-8 w-16 h-16 items-center p-3' style={{ borderRadius: "100%"}}>
+                            <img src={Brand} alt="brand" className='mx-auto h-8 w-8' />
                         </div>
                         <div className='w-6/6 flex flex-col p-6'>
                             <div className='text-NEUTRAL-_300 font-bold text-xl'>Brand Recognition</div>
@@ -31,8 +31,8 @@ const Statistics = () => {
                     </div>
                     <div className='bg-PRIMARY_CYAN w-14 h-4'></div>
                     <div className='bg-white w-3/12 mt-8'>
-                        <div className='bg-PRIMARY_DARK_VIOLET w-14' style={{ borderRadius: "50%"}}>
-                            <img src={Detailed} alt="detail" className='mx-auto' />
+                        <div className='bg-PRIMARY_DARK_VIOLET relative -top-8 ml-4 w-16 h-16 items-center p-3' style={{ borderRadius: "100%"}}>
+                            <img src={Detailed} alt="detail" className='mx-auto h-10 w-10' />
                         </div>
                         <div className='w-6/6 flex flex-col p-6'>
                             <div className='text-NEUTRAL-_300 font-bold text-xl'>Detailed Records</div>
@@ -44,8 +44,8 @@ const Statistics = () => {
                     </div>
                     <div className='bg-PRIMARY_CYAN w-14 h-4'></div>
                     <div className='bg-white w-3/12 mt-16'>
-                        <div className='bg-PRIMARY_DARK_VIOLET w-14' style={{ borderRadius: "50%"}}>
-                            <img src={Customizable} alt="customizable" className='mx-auto' />
+                        <div className='bg-PRIMARY_DARK_VIOLET relative -top-8 ml-4 w-16 h-16 items-center p-3' style={{ borderRadius: "100%"}}>
+                            <img src={Customizable} alt="customizable" className='mx-auto h-10 w-10' />
                         </div>
                         <div className='w-6/6 flex flex-col p-6'>
                             <div className='text-NEUTRAL-_300 font-bold text-xl'>Fully Customizable</div>
