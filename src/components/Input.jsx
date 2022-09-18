@@ -108,10 +108,10 @@ const InputUrl = () => {
         {urlData &&
             <div className="w-full mt-5 relative sm:top-12 xs:top-14 flex flex-row items-center justify-center">
                 <div className='xs:w-11/12 sm:w-6/12 border rounded-md flex xs:flex-col sm:flex-row sm:justify-between sm:items-center xs:p-3  sm:p-5  bg-white'>
-                    <div className='xs:w-12/12 sm:w-3/6 font-medium sm:mt-2'>{urlData.original_link}</div>
+                    <div className='xs:w-12/12 sm:w-3/6 font-medium sm:mt-2'>{urlData?.original_link}</div>
                     <div className='xs:w-12/12 sm:w-3/6 flex sm:flex-row xs:flex-col xs:mt-2 justify-between sm:items-center'>
-                        <div className='text-PRIMARY_CYAN'>{urlData.full_short_link}</div>
-                        <button className={`${copySuccess === "Copy" ? "bg-PRIMARY_CYAN" : "bg-PRIMARY_DARK_VIOLET"} xs:w-full sm:w-2/6 text-white rounded-md p-2`} onClick={() => copyToClipBoard(urlData.full_short_link)}>{copySuccess}</button>
+                        <div className='text-PRIMARY_CYAN'>{urlData?.full_short_link}</div>
+                        <button className={`${copySuccess === "Copy" ? "bg-PRIMARY_CYAN" : "bg-PRIMARY_DARK_VIOLET"} xs:w-full sm:w-2/6 text-white rounded-md p-2`} onClick={() => copyToClipBoard(urlData?.full_short_link)}>{copySuccess}</button>
                     </div>
                 </div>
             </div> 
